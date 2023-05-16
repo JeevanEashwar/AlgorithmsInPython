@@ -10,8 +10,11 @@ def climb_stairs_using_dynamic_programming(n):
         return n
     one, two = 1, 1
     for i in range(1, n):
+        # Save the current value of pointer 'one' using a temporary pointer 'temp'
         temp = one
+        # New value for one will be the sum of its previous value (value pointed by 'temp') and value of pointer 'two'
         one = temp + two
+        # Move the pointer to a new position by assigning the value from 'temp'
         two = temp
     return one
 
