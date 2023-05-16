@@ -8,7 +8,7 @@ def counting_bits_brute_force(n: int) -> List[int]:
     return result
 
 # Using caching and odd/even technique
-def number_of_bits_using_cache(n: int) -> List[int]:
+def counting_bits_using_cache(n: int) -> List[int]:
     """
     result[n] = result[n/2], if n is even number
     result[n] = result[n/2] + 1, if n is odd number
