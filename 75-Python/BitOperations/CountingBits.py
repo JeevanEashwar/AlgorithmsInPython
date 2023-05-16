@@ -1,18 +1,13 @@
 from typing import List
-def number_of_1_bits_using_AND_operator(n: int) -> int:
-    count = 0
-    input_ = n
-    while input_ != 0:
-        input_ = input_ & (input_ - 1)
-        count += 1
-    return count
 
+# Using brute force way of calculating bit count for every number from 0 to n
 def counting_bits_brute_force(n: int) -> List[int]:
     result = []
     for i in range(n+1):
         result.append(number_of_1_bits_using_AND_operator(i))
     return result
 
+# Using caching and odd/even technique
 def number_of_bits_using_cache(n: int) -> List[int]:
     """
     result[n] = result[n/2], if n is even number
